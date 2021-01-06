@@ -1,0 +1,23 @@
+ID: SAP_TRP_HDI_OBJ_REG_CUSTOM
+_schema-version: "3.1"
+version: 1.0.0
+modules:
+  - name: trp-custom-harmonization-srv
+    type: nodejs
+    path: srv
+    requires:
+      - name: trp4_hdi_sd_db
+      - name: trp4_hdi_pr_db
+
+resources:
+  - name: trp4_hdi_sd_db
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-tags:
+        - trp4_sd_db
+
+  - name: trp4_hdi_pr_db
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-tags:
+        - trp4_pr_db
