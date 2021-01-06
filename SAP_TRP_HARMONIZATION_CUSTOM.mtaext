@@ -1,0 +1,16 @@
+_schema-version: '3.1'
+ID: SAP_TRP_HARMONIZATION_API_CUSTOM
+extends: SAP_TRP_HARMONIZATION_API_CUSTOM
+
+resources:
+  - name: trp4_hdi_sd_db
+    parameters:
+      service-name: <trp4_hdi_sd_db>
+      config:
+        schema: <sd_schema>
+    
+  - name: trp4_hdi_pr_db
+    parameters:
+      service-name: <trp4_hdi_pr_db>
+      config:
+        schema: <pr_schema>
